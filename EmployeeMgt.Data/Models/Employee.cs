@@ -10,18 +10,15 @@ namespace EmployeeMgt.Data.Models
     public class Employee
     {
         [Key]
-        public Int64 Id { get; set; }
+        public int Id { get; set; }
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
-        [Display(Name = "User Name")]
-        [Required]
-        public string UserName { get; set; }
-        [Required]
-        public string Password { get; set; }
+        [Display(Name = "Phone Number")]
         [DataType(DataType.PhoneNumber)]
         public string MobileNo { get; set; }
+        [Display(Name = "Date of Birth")]
         public DateTime? DateofBirth { get; set; }
         public string Department { get; set; }  
         [DataType(DataType.Date)]

@@ -87,7 +87,7 @@ namespace EmployeeMgt.Web.Controllers
                         }
                         else
                         {
-                            return RedirectToAction("CustomerDashboard", "Verified");
+                            return RedirectToAction("#", "#");
                         }
                     }
                 }

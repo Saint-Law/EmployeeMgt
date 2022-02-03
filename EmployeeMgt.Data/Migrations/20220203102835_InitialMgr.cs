@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EmployeeMgt.Data.Migrations
 {
-    public partial class initialMigrations : Migration
+    public partial class InitialMgr : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,23 +11,13 @@ namespace EmployeeMgt.Data.Migrations
                 name: "Employees",
                 columns: table => new
                 {
-                    Id = table.Column<long>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
-                    UserName = table.Column<string>(nullable: false),
-                    Password = table.Column<string>(nullable: false),
                     MobileNo = table.Column<string>(nullable: true),
                     DateofBirth = table.Column<DateTime>(nullable: true),
-                    KinName = table.Column<string>(nullable: true),
-                    KinAddress = table.Column<string>(nullable: true),
-                    KinMobile = table.Column<string>(nullable: true),
-                    GuarantorName1 = table.Column<string>(nullable: true),
-                    GuarantorAddress1 = table.Column<string>(nullable: true),
-                    GuarantorPhone1 = table.Column<string>(nullable: true),
-                    GuarantorName2 = table.Column<string>(nullable: true),
-                    GuarantorAddress2 = table.Column<string>(nullable: true),
-                    GuarantorPhone2 = table.Column<string>(nullable: true),
+                    Department = table.Column<string>(nullable: true),
                     DateCreated = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
@@ -52,7 +42,7 @@ namespace EmployeeMgt.Data.Migrations
                 name: "UserLogins",
                 columns: table => new
                 {
-                    Id = table.Column<long>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserName = table.Column<string>(nullable: true),
                     Password = table.Column<string>(nullable: true),

@@ -75,5 +75,6 @@ namespace EmployeeMgt.Data.Repository
             return await context.Employees.SingleOrDefaultAsync(predicate);
         }
 
+      
     }
 }

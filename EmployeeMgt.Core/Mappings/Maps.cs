@@ -14,7 +14,6 @@ namespace EmployeeMgt.Core.Mappings
         public Maps()
         {
             CreateMap<Employee, EmployeeVM>().ReverseMap();
-            CreateMap<Employee, EmployeeProfileVM>().ReverseMap();
             CreateMap<Role, RoleVM>().ReverseMap();
             CreateMap<UserLogin, UserLoginVM>().ReverseMap();
             CreateMap<UserRole, UserRoleVM>().ReverseMap();
